@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destilacioni aparat</title>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+        background-color: white; /* Nježnija boja pozadine */
+    }
+    #preloader {
+        background: url('https://lh3.googleusercontent.com/proxy/eMwxTHSvhz7F9ugusG_nGf0oB5okjTn4Jk5eYUypEJb07z1fkcDjbjRwaEPOZFngZHdWMNZswtQm29wCWITMBP_wYolg3xXW5ClMz8xjYyLgSHmz_FicR0-ekLFK') no-repeat center center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        padding: 20px;
+        height: 100%;
+        box-sizing: border-box;
+        color:white;
+        z-index: 1001;
+    }
+      
+    .content {
+        display: none;
+        text-align: justify;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #333;
+    }
+    h1 {
+        color: #5a5a66;
+        font-family: 'Lobster', cursive;
+        font-style: italic;
+        animation: fadeIn 3s ease-in-out;
+        text-align: center; /* Corrected property value */
+    }
+    p, iframe, video {
+        max-width: 100%; /* Ensures max width does not exceed container size */
+        margin: auto;
+    }
+    video {
+        width: 100%;
+        height: auto; /* Height auto for maintaining aspect ratio */
+    }
+    .button {
+        display: block;
+        width: 200px;
+        padding: 10px;
+        margin: 20px auto;
+        background-color: #f8f1f1; /* Nježna boja pozadine */
+        color: #333;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none; /* Removes underline from links */
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 20px; /* Smaller font size for small screens */
+        }
+        body, html {
+            overflow-y: auto; /* Enables scrolling on small devices */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+    }
+</style>
+<script>
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('preloader').style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+    }, 2000);
+});
+</script>
+</head>
+<body>
+<div id="preloader"></div>
+<div class="content">
+    <h1>Destilacioni aparat</h1>
+    <p>Destilacioni mehanizam sastavljen je iz 4 dijela: ložište, kazan koji se ubacuje u ložište, cijev od
+        isparenja i posuda gdje se destilira (hladi isparenje). Dimenzije sastavljenog mehanizma su
+        visina 38,5cm i težina 2,142gr. Izrađen je u Beču.
+        Funkcija destilacionog aparata je bila ekstrahovanje tečnosti iz biljaka. U dijelu koji izgleda kao
+        kotao stavljale su se biljke a ispod njega se postavljala špiritusna lampa koja je zagrijavala cijeli
+        sistem. Drugi kotao, unutar kojeg se nalazi cijev, služio je za vodu. U lijevku (cijevi) na drugom
+        kotlu izlazile su kapi tekućine koja je bila ekstahovana iz samog bilja. Tako su nastajale kapi za
+        oči, za rane i razne druge namjene. Korišćeno je više vrsta biljaka ali uglavnom su to bile biljke
+        koje rastu na prostorima primorja i ostalim djelova Crne Gore. Najčešće je to bio pelin, hajdučka
+        trava, maslinov list i drugo bilje zavisno od namjene i svrhe.</p>
+        <video controls>
+            <source src="index.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+</div>
+</body>
+</html>
